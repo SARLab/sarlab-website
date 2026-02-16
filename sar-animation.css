@@ -1,0 +1,380 @@
+/* Modern SAR Drone Animation Styles */
+.sar-animation-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    aspect-ratio: 16/10;
+    background: linear-gradient(180deg, #0a0f1a 0%, #1a1f3a 50%, #0d1320 100%);
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 100px rgba(59, 130, 246, 0.1);
+}
+
+.sar-animation-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(ellipse at 30% 20%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+        radial-gradient(ellipse at 70% 80%, rgba(6, 182, 212, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+/* Grid overlay */
+.sar-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        linear-gradient(rgba(59, 130, 246, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(59, 130, 246, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    animation: gridMove 20s linear infinite;
+}
+
+@keyframes gridMove {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(40px, 40px); }
+}
+
+/* Drone styling */
+.sar-drone {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 60px;
+    animation: droneHover 3s ease-in-out infinite;
+}
+
+@keyframes droneHover {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(-10px); }
+}
+
+.drone-body {
+    width: 60px;
+    height: 25px;
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    border: 2px solid #3b82f6;
+    border-radius: 8px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.5), inset 0 0 10px rgba(59, 130, 246, 0.1);
+}
+
+.drone-body::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 8px;
+    background: linear-gradient(90deg, #3b82f6, #06b6d4);
+    border-radius: 2px;
+    animation: sensorPulse 1s ease-in-out infinite;
+}
+
+@keyframes sensorPulse {
+    0%, 100% { opacity: 0.5; box-shadow: 0 0 5px #3b82f6; }
+    50% { opacity: 1; box-shadow: 0 0 15px #3b82f6, 0 0 30px #06b6d4; }
+}
+
+.drone-arm {
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, #3b82f6, #1e293b);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.drone-arm.left { left: -40px; }
+.drone-arm.right { right: -40px; transform: translateY(-50%) rotate(180deg); }
+
+.drone-propeller {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.drone-propeller.left { left: -55px; }
+.drone-propeller.right { right: -55px; }
+
+.propeller-blade {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #3b82f6, transparent);
+    top: 50%;
+    left: 0;
+    transform-origin: center;
+    animation: propellerSpin 0.1s linear infinite;
+}
+
+.propeller-blade:nth-child(2) { transform: translateY(-50%) rotate(90deg); }
+
+@keyframes propellerSpin {
+    from { transform: translateY(-50%) rotate(0deg); }
+    to { transform: translateY(-50%) rotate(360deg); }
+}
+
+/* Radar waves */
+.radar-waves {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 300px;
+}
+
+.radar-wave {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(59, 130, 246, 0.8);
+    border-radius: 50%;
+    transform: translateX(-50%) scale(0);
+    opacity: 0;
+    animation: radarWave 2s ease-out infinite;
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.5), inset 0 0 10px rgba(59, 130, 246, 0.2);
+}
+
+.radar-wave:nth-child(2) { animation-delay: 0.4s; }
+.radar-wave:nth-child(3) { animation-delay: 0.8s; }
+.radar-wave:nth-child(4) { animation-delay: 1.2s; }
+.radar-wave:nth-child(5) { animation-delay: 1.6s; }
+
+@keyframes radarWave {
+    0% {
+        transform: translateX(-50%) scale(0);
+        opacity: 1;
+        border-color: rgba(59, 130, 246, 1);
+    }
+    50% {
+        border-color: rgba(6, 182, 212, 0.6);
+    }
+    100% {
+        transform: translateX(-50%) scale(15);
+        opacity: 0;
+        border-color: rgba(59, 130, 246, 0);
+    }
+}
+
+/* Target area */
+.target-area {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 100px;
+}
+
+.target-building {
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(30, 41, 59, 0.8), rgba(15, 23, 42, 0.9));
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 2px 2px 0 0;
+}
+
+.target-building:nth-child(1) {
+    left: 10%;
+    width: 40px;
+    height: 60px;
+}
+
+.target-building:nth-child(2) {
+    left: 35%;
+    width: 50px;
+    height: 80px;
+}
+
+.target-building:nth-child(3) {
+    left: 65%;
+    width: 35px;
+    height: 50px;
+}
+
+.target-building:nth-child(4) {
+    left: 80%;
+    width: 30px;
+    height: 70px;
+}
+
+.building-windows {
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    background-image: 
+        linear-gradient(rgba(59, 130, 246, 0.3) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(59, 130, 246, 0.3) 1px, transparent 1px);
+    background-size: 8px 12px;
+    animation: windowFlicker 3s ease-in-out infinite;
+}
+
+@keyframes windowFlicker {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.6; }
+}
+
+/* Data visualization overlay */
+.data-overlay {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-family: 'Inter', monospace;
+    font-size: 10px;
+    color: rgba(59, 130, 246, 0.7);
+    line-height: 1.6;
+}
+
+.data-line {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+}
+
+.data-label {
+    color: rgba(148, 163, 184, 0.6);
+}
+
+.data-value {
+    color: rgba(59, 130, 246, 0.9);
+    font-weight: 600;
+}
+
+.data-bar {
+    width: 60px;
+    height: 3px;
+    background: rgba(30, 41, 59, 0.8);
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+}
+
+.data-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #3b82f6, #06b6d4);
+    animation: dataBarFill 2s ease-in-out infinite;
+}
+
+@keyframes dataBarFill {
+    0%, 100% { width: 30%; }
+    50% { width: 80%; }
+}
+
+/* Scanning line effect */
+.scan-line {
+    position: absolute;
+    top: 35%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.8), transparent);
+    animation: scanLine 3s ease-in-out infinite;
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
+
+@keyframes scanLine {
+    0%, 100% { opacity: 0; transform: translateY(0); }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; transform: translateY(200px); }
+}
+
+/* HUD elements */
+.hud-corner {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 2px solid rgba(59, 130, 246, 0.4);
+}
+
+.hud-corner.top-left {
+    top: 15px;
+    left: 15px;
+    border-right: none;
+    border-bottom: none;
+}
+
+.hud-corner.top-right {
+    top: 15px;
+    right: 15px;
+    border-left: none;
+    border-bottom: none;
+}
+
+.hud-corner.bottom-left {
+    bottom: 15px;
+    left: 15px;
+    border-right: none;
+    border-top: none;
+}
+
+.hud-corner.bottom-right {
+    bottom: 15px;
+    right: 15px;
+    border-left: none;
+    border-top: none;
+}
+
+/* Target lock indicator */
+.target-lock {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 80px;
+    border: 1px dashed rgba(59, 130, 246, 0.4);
+    border-radius: 4px;
+    animation: targetLock 2s ease-in-out infinite;
+}
+
+@keyframes targetLock {
+    0%, 100% { border-color: rgba(59, 130, 246, 0.2); }
+    50% { border-color: rgba(59, 130, 246, 0.6); }
+}
+
+.target-lock::before,
+.target-lock::after {
+    content: '';
+    position: absolute;
+    border: 2px solid rgba(59, 130, 246, 0.6);
+    width: 8px;
+    height: 8px;
+}
+
+.target-lock::before {
+    top: -2px;
+    left: -2px;
+    border-right: none;
+    border-bottom: none;
+}
+
+.target-lock::after {
+    bottom: -2px;
+    right: -2px;
+    border-left: none;
+    border-top: none;
+}
