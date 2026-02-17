@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SARLab | Advanced Synthetic Aperture Radar Technology</title>
     <meta name="description" content="SARLab - Pioneering Synthetic Aperture Radar solutions for defense, environmental monitoring, and commercial applications.">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -65,6 +66,17 @@
         }
         
         .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+        }
+        
+        .logo-text {
             font-size: 1.5rem;
             font-weight: 700;
             background: linear-gradient(135deg, #3b82f6, #06b6d4);
@@ -750,6 +762,17 @@
         }
         
         .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .footer-logo-icon {
+            width: 32px;
+            height: 32px;
+        }
+        
+        .footer-logo-text {
             font-size: 1.3rem;
             font-weight: 700;
             background: linear-gradient(135deg, #3b82f6, #06b6d4);
@@ -822,7 +845,26 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">SARLab</div>
+            <a href="#" class="logo">
+                <svg class="logo-icon" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="logoIconGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="22" cy="22" r="20" fill="none" stroke="url(#logoIconGrad)" stroke-width="2"/>
+                    <circle cx="22" cy="22" r="14" fill="none" stroke="url(#logoIconGrad)" stroke-width="1.5" opacity="0.6"/>
+                    <circle cx="22" cy="22" r="8" fill="none" stroke="url(#logoIconGrad)" stroke-width="1" opacity="0.4"/>
+                    <line x1="22" y1="4" x2="22" y2="40" stroke="url(#logoIconGrad)" stroke-width="1" opacity="0.3"/>
+                    <line x1="4" y1="22" x2="40" y2="22" stroke="url(#logoIconGrad)" stroke-width="1" opacity="0.3"/>
+                    <circle cx="22" cy="22" r="3" fill="url(#logoIconGrad)"/>
+                    <path d="M 22 22 L 22 4 A 18 18 0 0 1 36 12 Z" fill="url(#logoIconGrad)" opacity="0.3"/>
+                    <path d="M 38 10 Q 42 8 44 12" fill="none" stroke="#22c55e" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M 40 7 Q 46 4 48 10" fill="none" stroke="#22c55e" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+                </svg>
+                <span class="logo-text">SARLab</span>
+            </a>
             <ul class="nav-links">
                 <li><a href="#technology">Technology</a></li>
                 <li><a href="#applications">Applications</a></li>
@@ -1267,7 +1309,26 @@
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <div class="footer-logo">SARLab</div>
+            <div class="footer-logo">
+                <svg class="footer-logo-icon" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="footerLogoIconGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="22" cy="22" r="20" fill="none" stroke="url(#footerLogoIconGrad)" stroke-width="2"/>
+                    <circle cx="22" cy="22" r="14" fill="none" stroke="url(#footerLogoIconGrad)" stroke-width="1.5" opacity="0.6"/>
+                    <circle cx="22" cy="22" r="8" fill="none" stroke="url(#footerLogoIconGrad)" stroke-width="1" opacity="0.4"/>
+                    <line x1="22" y1="4" x2="22" y2="40" stroke="url(#footerLogoIconGrad)" stroke-width="1" opacity="0.3"/>
+                    <line x1="4" y1="22" x2="40" y2="22" stroke="url(#footerLogoIconGrad)" stroke-width="1" opacity="0.3"/>
+                    <circle cx="22" cy="22" r="3" fill="url(#footerLogoIconGrad)"/>
+                    <path d="M 22 22 L 22 4 A 18 18 0 0 1 36 12 Z" fill="url(#footerLogoIconGrad)" opacity="0.3"/>
+                    <path d="M 38 10 Q 42 8 44 12" fill="none" stroke="#22c55e" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M 40 7 Q 46 4 48 10" fill="none" stroke="#22c55e" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+                </svg>
+                <span class="footer-logo-text">SARLab</span>
+            </div>
             <div class="footer-links">
                 <a href="#technology">Technology</a>
                 <a href="#applications">Applications</a>
