@@ -338,9 +338,9 @@
     opacity: 0.9;
 }
 
-/* Footer logo variant (smaller) */
+/* Footer logo variant */
 .footer-logo-animated .logo-graphic {
-    width: 50px;
+    width: 100px;
     height: 50px;
 }
 
@@ -349,9 +349,27 @@
     height: 8px;
 }
 
-.footer-logo-animated .wave-ring:nth-child(2) { width: 20px; height: 20px; }
-.footer-logo-animated .wave-ring:nth-child(3) { width: 35px; height: 35px; }
-.footer-logo-animated .wave-ring:nth-child(4) { width: 50px; height: 50px; }
+.footer-logo-animated .psf-horizontal {
+    width: 60px;
+    height: 3px;
+}
+
+.footer-logo-animated .psf-vertical {
+    width: 3px;
+    height: 60px;
+}
+
+.footer-logo-animated .wave-left,
+.footer-logo-animated .wave-right {
+    width: 20px;
+    height: 35px;
+}
+
+.footer-logo-animated .wave-left::before,
+.footer-logo-animated .wave-right::before {
+    width: 14px;
+    height: 25px;
+}
 
 .footer-logo-animated .logo-text-main {
     font-size: 1.3rem;
