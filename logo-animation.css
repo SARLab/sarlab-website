@@ -43,50 +43,40 @@
     animation: psfSidelobes 3s ease-in-out infinite;
 }
 
-/* PSF cross with elegant tapered glow - thickest at center */
-.psf-horizontal {
+/* PSF 4-pointed star with elegant tapered glow */
+.psf-star {
     position: absolute;
     top: 50%;
     left: 50%;
+    width: 90px;
+    height: 90px;
     transform: translate(-50%, -50%);
+    animation: psfSidelobes 3s ease-in-out infinite;
+}
+
+.psf-star-arm {
+    position: absolute;
+    top: 50%;
+    left: 50%;
     width: 90px;
     height: 4px;
+    transform-origin: center;
     background: linear-gradient(90deg, 
         transparent 0%,
         rgba(59, 130, 246, 0.1) 10%,
-        rgba(59, 130, 246, 0.4) 25%,
-        rgba(59, 130, 246, 0.8) 40%,
-        rgba(255, 255, 255, 1) 50%,
-        rgba(59, 130, 246, 0.8) 60%,
-        rgba(59, 130, 246, 0.4) 75%,
+        rgba(59, 130, 246, 0.5) 25%,
+        rgba(255, 255, 255, 0.95) 50%,
+        rgba(59, 130, 246, 0.5) 75%,
         rgba(59, 130, 246, 0.1) 90%,
         transparent 100%
     );
-    animation: psfSidelobes 3s ease-in-out infinite;
     filter: blur(0.3px);
 }
 
-.psf-vertical {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 4px;
-    height: 90px;
-    background: linear-gradient(180deg, 
-        transparent 0%,
-        rgba(6, 182, 212, 0.1) 10%,
-        rgba(6, 182, 212, 0.4) 25%,
-        rgba(6, 182, 212, 0.8) 40%,
-        rgba(255, 255, 255, 1) 50%,
-        rgba(6, 182, 212, 0.8) 60%,
-        rgba(6, 182, 212, 0.4) 75%,
-        rgba(6, 182, 212, 0.1) 90%,
-        transparent 100%
-    );
-    animation: psfSidelobes 3s ease-in-out infinite;
-    filter: blur(0.3px);
-}
+.psf-star-arm:nth-child(1) { transform: translate(-50%, -50%) rotate(0deg); }
+.psf-star-arm:nth-child(2) { transform: translate(-50%, -50%) rotate(90deg); }
+.psf-star-arm:nth-child(3) { transform: translate(-50%, -50%) rotate(45deg); width: 70px; opacity: 0.7; }
+.psf-star-arm:nth-child(4) { transform: translate(-50%, -50%) rotate(135deg); width: 70px; opacity: 0.7; }
 
 @keyframes psfPulse {
     0%, 100% { 
