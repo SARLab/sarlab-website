@@ -77,11 +77,16 @@
 .psf-star-arm:nth-child(2) { transform: translate(-50%, -50%) rotate(90deg); }
 
 @keyframes apertureBloom {
-    0%, 40% { 
+    0%, 38% { 
         transform: scale(0);
         opacity: 0;
         box-shadow: none;
         filter: brightness(0.5);
+    }
+    42% {
+        transform: scale(0.1);
+        opacity: 0.2;
+        box-shadow: 0 0 5px #3b82f6;
     }
     45% {
         transform: scale(0.3);
@@ -89,15 +94,15 @@
         box-shadow: 0 0 10px #3b82f6;
     }
     50% { 
-        transform: scale(1.2);
+        transform: scale(1);
         opacity: 1;
-        box-shadow: 0 0 30px #ffffff, 0 0 60px #3b82f6, 0 0 90px #06b6d4;
+        box-shadow: 0 0 25px #ffffff, 0 0 50px #3b82f6, 0 0 75px #06b6d4;
         filter: brightness(2);
     }
     60% {
-        transform: scale(1);
+        transform: scale(0.9);
         opacity: 0.9;
-        box-shadow: 0 0 20px #3b82f6, 0 0 40px #06b6d4;
+        box-shadow: 0 0 15px #3b82f6, 0 0 30px #06b6d4;
         filter: brightness(1.5);
     }
     80%, 100% { 
@@ -234,29 +239,37 @@
     }
 }
 
-/* Energy burst when waves converge */
+/* Energy burst when waves converge - more gradual */
 .energy-burst {
     position: absolute;
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.9) 0%, rgba(59, 130, 246, 0.5) 30%, transparent 70%);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.6) 0%, rgba(59, 130, 246, 0.3) 40%, transparent 70%);
     animation: burst 3s ease-out infinite;
     opacity: 0;
     z-index: 8;
 }
 
 @keyframes burst {
-    0%, 45% {
+    0%, 42% {
         transform: scale(0);
         opacity: 0;
     }
-    50% {
-        transform: scale(1);
-        opacity: 1;
+    45% {
+        transform: scale(0.3);
+        opacity: 0.3;
     }
-    55%, 100% {
-        transform: scale(2);
+    50% {
+        transform: scale(0.8);
+        opacity: 0.6;
+    }
+    55% {
+        transform: scale(1.2);
+        opacity: 0.3;
+    }
+    60%, 100% {
+        transform: scale(1.5);
         opacity: 0;
     }
 }
@@ -279,21 +292,6 @@
     50% { 
         opacity: 1;
         transform: scaleX(1);
-    }
-}
-
-@keyframes burst {
-    0%, 45% {
-        transform: scale(0);
-        opacity: 0;
-    }
-    50% {
-        transform: scale(1);
-        opacity: 0.8;
-    }
-    55%, 100% {
-        transform: scale(1.5);
-        opacity: 0;
     }
 }
 
