@@ -71,23 +71,6 @@
             gap: 0.75rem;
         }
         
-        .logo-icon {
-            width: 340px;
-            height: auto;
-            max-height: 90px;
-            object-fit: contain;
-            filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.6));
-        }
-        
-        .logo-text {
-            font-size: 1.7rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, #3b82f6, #06b6d4);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
         .nav-links {
             display: flex;
             gap: 2.5rem;
@@ -816,23 +799,6 @@
             gap: 0.75rem;
         }
         
-        .footer-logo-icon {
-            width: 280px;
-            height: auto;
-            max-height: 80px;
-            object-fit: contain;
-            filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.5));
-        }
-        
-        .footer-logo-text {
-            font-size: 1.5rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, #3b82f6, #06b6d4);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
         .footer-links {
             display: flex;
             gap: 2rem;
@@ -892,13 +858,24 @@
             }
         }
     </style>
+    <link rel="stylesheet" href="logo-animation.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#" class="logo">
-                <img src="assets/aperture-dynamics-logo.png" alt="Aperture Dynamics" class="logo-icon">
+            <a href="#" class="logo logo-animated">
+                <div class="logo-graphic">
+                    <div class="aperture-center"></div>
+                    <div class="wave-ring"></div>
+                    <div class="wave-ring"></div>
+                    <div class="wave-ring"></div>
+                    <div class="scan-beam"></div>
+                </div>
+                <div class="logo-text-container">
+                    <span class="logo-text-main">Aperture Dynamics</span>
+                    <span class="logo-text-sub">Advanced Radar Systems</span>
+                </div>
             </a>
             <ul class="nav-links">
                 <li><a href="#technology">Technology</a></li>
@@ -1390,8 +1367,18 @@
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <div class="footer-logo">
-                <img src="assets/aperture-dynamics-logo.png" alt="Aperture Dynamics" class="footer-logo-icon">
+            <div class="footer-logo logo-animated footer-logo-animated">
+                <div class="logo-graphic">
+                    <div class="aperture-center"></div>
+                    <div class="wave-ring"></div>
+                    <div class="wave-ring"></div>
+                    <div class="wave-ring"></div>
+                    <div class="scan-beam"></div>
+                </div>
+                <div class="logo-text-container">
+                    <span class="logo-text-main">Aperture Dynamics</span>
+                    <span class="logo-text-sub">Advanced Radar Systems</span>
+                </div>
             </div>
             <div class="footer-links">
                 <a href="#technology">Technology</a>
