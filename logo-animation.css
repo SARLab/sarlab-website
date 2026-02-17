@@ -84,20 +84,20 @@
         filter: brightness(0.5);
     }
     45% {
-        transform: scale(0.5);
+        transform: scale(0.3);
         opacity: 0.5;
         box-shadow: 0 0 10px #3b82f6;
     }
     50% { 
-        transform: scale(2);
+        transform: scale(1.2);
         opacity: 1;
-        box-shadow: 0 0 40px #ffffff, 0 0 80px #3b82f6, 0 0 120px #06b6d4, 0 0 160px rgba(6, 182, 212, 0.5);
+        box-shadow: 0 0 30px #ffffff, 0 0 60px #3b82f6, 0 0 90px #06b6d4;
         filter: brightness(2);
     }
     60% {
-        transform: scale(1.5);
+        transform: scale(1);
         opacity: 0.9;
-        box-shadow: 0 0 30px #3b82f6, 0 0 60px #06b6d4;
+        box-shadow: 0 0 20px #3b82f6, 0 0 40px #06b6d4;
         filter: brightness(1.5);
     }
     80%, 100% { 
