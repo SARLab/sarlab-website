@@ -303,7 +303,98 @@
     }
 }
 
-/* Text styling */
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+    .logo-graphic {
+        width: 100px;
+        height: 50px;
+    }
+    
+    .wave-left, .wave-right {
+        width: 22px;
+        height: 40px;
+        margin-top: -20px;
+    }
+    
+    .wave-left {
+        left: 5px;
+    }
+    
+    .wave-right {
+        right: 5px;
+    }
+    
+    .wave-left::before, .wave-right::before {
+        width: 15px;
+        height: 28px;
+    }
+    
+    .aperture-center {
+        width: 10px;
+        height: 10px;
+    }
+    
+    .psf-horizontal {
+        width: 70px;
+        height: 3px;
+    }
+    
+    .psf-vertical {
+        width: 3px;
+        height: 70px;
+    }
+    
+    .logo-text-main {
+        font-size: 1.2rem;
+    }
+    
+    .logo-text-sub {
+        font-size: 0.55rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-graphic {
+        width: 80px;
+        height: 40px;
+    }
+    
+    .wave-left, .wave-right {
+        width: 18px;
+        height: 32px;
+        margin-top: -16px;
+        border-width: 2px;
+    }
+    
+    .wave-left::before, .wave-right::before {
+        width: 12px;
+        height: 22px;
+        border-width: 1px;
+    }
+    
+    .aperture-center {
+        width: 8px;
+        height: 8px;
+    }
+    
+    .psf-horizontal {
+        width: 55px;
+        height: 2.5px;
+    }
+    
+    .psf-vertical {
+        width: 2.5px;
+        height: 55px;
+    }
+    
+    .logo-text-main {
+        font-size: 1rem;
+    }
+    
+    .logo-text-sub {
+        font-size: 0.5rem;
+    }
+}
 .logo-text-container {
     display: flex;
     flex-direction: column;
