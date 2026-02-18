@@ -191,15 +191,15 @@
         opacity: 1;
     }
     45% {
-        transform: translateX(50px);
+        transform: translateX(35px);
         opacity: 1;
     }
     50% {
-        transform: translateX(55px);
+        transform: translateX(38px);
         opacity: 0.5;
     }
     55%, 100% {
-        transform: translateX(55px);
+        transform: translateX(38px);
         opacity: 0;
     }
 }
@@ -213,15 +213,15 @@
         opacity: 1;
     }
     45% {
-        transform: translateX(-50px);
+        transform: translateX(-35px);
         opacity: 1;
     }
     50% {
-        transform: translateX(-55px);
+        transform: translateX(-38px);
         opacity: 0.5;
     }
     55%, 100% {
-        transform: translateX(-55px);
+        transform: translateX(-38px);
         opacity: 0;
     }
 }
