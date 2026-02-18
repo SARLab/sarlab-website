@@ -303,138 +303,51 @@
     }
 }
 
-/* Responsive adjustments for mobile */
 @media (max-width: 768px) {
-    .logo-graphic {
-        width: 100px;
-        height: 50px;
+    .logo-animated .logo-graphic,
+    .footer-logo-animated .logo-graphic {
+        width: 100px !important;
+        height: 50px !important;
     }
     
-    .wave-left, .wave-right {
-        width: 22px;
-        height: 40px;
-        margin-top: -20px;
-    }
-    
-    .wave-left {
-        left: 5px;
-    }
-    
-    .wave-right {
-        right: 5px;
-    }
-    
-    .wave-left::before, .wave-right::before {
-        width: 15px;
-        height: 28px;
-    }
-    
-    .aperture-center {
-        width: 10px;
-        height: 10px;
-    }
-    
-    .psf-horizontal {
-        width: 70px;
-        height: 3px;
-    }
-    
-    .psf-vertical {
-        width: 3px;
-        height: 70px;
-    }
-    
-    .logo-text-main {
-        font-size: 1.2rem;
-    }
-    
-    .logo-text-sub {
-        font-size: 0.55rem;
+    .logo-animated .wave-left,
+    .logo-animated .wave-right,
+    .footer-logo-animated .wave-left,
+    .footer-logo-animated .wave-right {
+        width: 22px !important;
+        height: 40px !important;
     }
 }
 
 @media (max-width: 480px) {
-    .logo-graphic {
-        width: 80px;
-        height: 40px;
+    .logo-animated .logo-graphic,
+    .footer-logo-animated .logo-graphic {
+        width: 80px !important;
+        height: 40px !important;
     }
     
-    .wave-left, .wave-right {
-        width: 18px;
-        height: 32px;
-        margin-top: -16px;
-        border-width: 2px;
-    }
-    
-    .wave-left::before, .wave-right::before {
-        width: 12px;
-        height: 22px;
-        border-width: 1px;
-    }
-    
-    .aperture-center {
-        width: 8px;
-        height: 8px;
-    }
-    
-    .psf-horizontal {
-        width: 55px;
-        height: 2.5px;
-    }
-    
-    .psf-vertical {
-        width: 2.5px;
-        height: 55px;
-    }
-    
-    .logo-text-main {
-        font-size: 1rem;
-    }
-    
-    .logo-text-sub {
-        font-size: 0.5rem;
+    .logo-animated .wave-left,
+    .logo-animated .wave-right,
+    .footer-logo-animated .wave-left,
+    .footer-logo-animated .wave-right {
+        width: 18px !important;
+        height: 32px !important;
     }
 }
 
-/* Portrait orientation specific - prevent logo squishing */
 @media (max-width: 480px) and (orientation: portrait) {
-    .logo-animated {
-        gap: 0.5rem;
+    .logo-animated .logo-graphic,
+    .footer-logo-animated .logo-graphic {
+        width: 60px !important;
+        height: 35px !important;
     }
     
-    .logo-graphic {
-        width: 60px;
-        height: 35px;
-    }
-    
-    .wave-left, .wave-right {
-        width: 14px;
-        height: 25px;
-        margin-top: -12px;
-        border-width: 2px;
-    }
-    
-    .wave-left {
-        left: 2px;
-    }
-    
-    .wave-right {
-        right: 2px;
-    }
-    
-    .aperture-center {
-        width: 6px;
-        height: 6px;
-    }
-    
-    .psf-horizontal {
-        width: 40px;
-        height: 2px;
-    }
-    
-    .psf-vertical {
-        width: 2px;
-        height: 40px;
+    .logo-animated .wave-left,
+    .logo-animated .wave-right,
+    .footer-logo-animated .wave-left,
+    .footer-logo-animated .wave-right {
+        width: 14px !important;
+        height: 25px !important;
     }
 }
 .logo-text-container {
