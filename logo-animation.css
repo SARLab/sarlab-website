@@ -395,6 +395,48 @@
         font-size: 0.5rem;
     }
 }
+
+/* Portrait orientation specific - prevent logo squishing */
+@media (max-width: 480px) and (orientation: portrait) {
+    .logo-animated {
+        gap: 0.5rem;
+    }
+    
+    .logo-graphic {
+        width: 60px;
+        height: 35px;
+    }
+    
+    .wave-left, .wave-right {
+        width: 14px;
+        height: 25px;
+        margin-top: -12px;
+        border-width: 2px;
+    }
+    
+    .wave-left {
+        left: 2px;
+    }
+    
+    .wave-right {
+        right: 2px;
+    }
+    
+    .aperture-center {
+        width: 6px;
+        height: 6px;
+    }
+    
+    .psf-horizontal {
+        width: 40px;
+        height: 2px;
+    }
+    
+    .psf-vertical {
+        width: 2px;
+        height: 40px;
+    }
+}
 .logo-text-container {
     display: flex;
     flex-direction: column;
