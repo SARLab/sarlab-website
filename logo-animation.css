@@ -191,15 +191,15 @@
         opacity: 1;
     }
     45% {
-        transform: translateX(35px);
+        transform: translateX(50px);
         opacity: 1;
     }
     50% {
-        transform: translateX(38px);
+        transform: translateX(55px);
         opacity: 0.5;
     }
     55%, 100% {
-        transform: translateX(38px);
+        transform: translateX(55px);
         opacity: 0;
     }
 }
@@ -213,15 +213,15 @@
         opacity: 1;
     }
     45% {
-        transform: translateX(-35px);
+        transform: translateX(-50px);
         opacity: 1;
     }
     50% {
-        transform: translateX(-38px);
+        transform: translateX(-55px);
         opacity: 0.5;
     }
     55%, 100% {
-        transform: translateX(-38px);
+        transform: translateX(-55px);
         opacity: 0;
     }
 }
@@ -339,11 +339,6 @@
 }
 
 /* Footer logo variant */
-.footer-logo-animated .logo-graphic {
-    width: 100px;
-    height: 50px;
-}
-
 .footer-logo-animated .aperture-center {
     width: 8px;
     height: 8px;
@@ -357,18 +352,6 @@
 .footer-logo-animated .psf-vertical {
     width: 3px;
     height: 60px;
-}
-
-.footer-logo-animated .wave-left,
-.footer-logo-animated .wave-right {
-    width: 20px;
-    height: 35px;
-}
-
-.footer-logo-animated .wave-left::before,
-.footer-logo-animated .wave-right::before {
-    width: 14px;
-    height: 25px;
 }
 
 .footer-logo-animated .logo-text-main {
